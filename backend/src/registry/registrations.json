@@ -1,15 +1,16 @@
 {
     "apps": [
         {
-            "appName": "<appName>",
-            "issuer": "<issuer>",
-            "clientId": "<clientId>",
+            "appName": "JohnNKingApp",
+            "issuer": "https://api.logicahealth.org/JohnNKing/data",
+            "clientId": "acf5c946-9bba-4bf8-a866-1a60f88fdd74",
             "clientSecret": "<clientSecret>",
-            "scope": "launch openid profile fhirUser user/Patient.read user/Condition.read user/Encounter.read",
+            "scope": "launch openid profile fhirUser patient/Patient.read patient/Observation.read patient/Condition.read patient/Encounter.read",
             "launchUrl": "http://localhost:3000",
             "redirectUrl": "http://localhost:3000/auth/callback",
             "clinicalData": [
                 "Patient",
+                "Observation",
                 "Condition",
                 "Encounter"
             ]

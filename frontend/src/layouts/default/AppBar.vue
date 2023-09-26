@@ -4,7 +4,7 @@
     <v-app-bar-title>
       <v-icon icon="mdi-circle-slice-4" />
 
-      SoF Demo Application
+      Newbornscreening Demo Application
     </v-app-bar-title>
   </v-app-bar>
 </template>

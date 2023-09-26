@@ -108,10 +108,16 @@ export class FhirService {
     patientId: string,
     clinicalResources: string[],
   ) {
+
+    // TODO: Why does this change constantly?
+    console.log(patientId); 
+
     const fhirQueries = [];
     for (const clinicalResource of clinicalResources) {
       let query: string;
       if (clinicalResource === 'Patient') {
+
+        // TODO: Injection vulnerability here with patientId?
         query = fhirServerUrl + '/' + clinicalResource + '/' + patientId;
       } else {
         query =
@@ -119,6 +125,11 @@ export class FhirService {
       }
       fhirQueries.push(query);
     }
+
+    // TODO: Testing crossing patient scope boundary
+    // fhirQueries.splice(0, fhirQueries.length);
+    // fhirQueries.push(fhirServerUrl + '/Patient/BILIBABY')
+
     return fhirQueries;
   }
 }
