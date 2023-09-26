@@ -18,7 +18,7 @@ export class RegistryService {
     const appRegistration = await jsonata(expression).evaluate(REGISTRATIONS);
     if (!appRegistration) {
       const message =
-        'No regisration found found for appName: ' +
+        'No registration found for appName: ' +
         appName +
         ' & issuer: ' +
         issuer;

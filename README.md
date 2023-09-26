@@ -12,7 +12,7 @@ Demo Application for SMART on FHIR. This application demonstrates steps involved
 # App Registration
 This app has been tested against [Logica Sandbox](https://sandbox.logicahealth.org/)
 Register your application in Logica Sandbox and update appName, issuer, clientId and clientSecret
-into `backend/src/registry/registration.json`
+into `backend/src/registry/registrations.json`
 
 # Frontend
 Run all commands inside `frontend` directory
@@ -84,3 +84,5 @@ npm run build
 
 # Note
 Please use FireFox browswer to test as Chrome does not allow third party cookies to be set.
+
+Also, both front and backend are configured to run on port 3000. To demo the app, build the frontend for *production* and then run the backend in development mode.
