@@ -37,7 +37,7 @@ export class AuthController {
     res.cookie('sessionId', state, {
       maxAge: 3600000,
       httpOnly: true,
-      sameSite: false,
+      sameSite: 'none',
       secure: true,
     });
     res.status(HttpStatus.FOUND);
